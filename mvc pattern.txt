@@ -1,0 +1,2 @@
+- modelddo: insert,delete,update
+view: %-44s
