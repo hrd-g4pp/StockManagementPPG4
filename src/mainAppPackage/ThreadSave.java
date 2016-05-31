@@ -43,7 +43,7 @@ public class ThreadSave extends Thread{
         for (int i = 0; i <seprateFile; i++) {
             s[i] = new ThreadSave(arrRecords[i], new File("src/file/record/record" + (i+1) + ".ppg4"));            
             s[i].start();
-            s[i].join(10);
+            s[i].join();
         }
         fRowSet =new File("src/file/rowSet/RowSetShow.row");
         if(!fRowSet.exists()){

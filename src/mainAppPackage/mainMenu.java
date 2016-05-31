@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class mainMenu {
+	public mainMenu() throws FileNotFoundException, ClassNotFoundException, IOException {
+		//new MethodCollection();
+	}
     public void menu()
     {
         System.out.println("\n\n\n");
@@ -15,12 +18,12 @@ public class mainMenu {
 	String line =tab+"+-------------------------------------------------------------------------------------------+%n";                               
 	
         System.out.format(line,"");		
-	System.out.format(m1Format,"","*)Display","W)rite", "R)Read","U)date","D)elete","F)irst","P)revious","N)ext","L)ast");
+	System.out.format(m1Format,"","*)Display","I)nsert", "V)iew","U)date","D)elete","F)irst","P)revious","N)ext","L)ast");
 	System.out.format(space,"","");
 	System.out.format(m2Format,"", "Sea)rch", "G)o To","Se)t row","Sa)ve","B)ackup","Re)store","H)elp","E)xit");
 	System.out.format(line,"");
     }
-    public void displayMenu() throws FileNotFoundException, ClassNotFoundException, IOException{
+    public void displayMenu() throws FileNotFoundException, ClassNotFoundException, IOException, InterruptedException{
         mainMenu main=new mainMenu();
         MethodCollection method=new MethodCollection();
         Scanner sc=new Scanner(System.in);
@@ -35,13 +38,14 @@ public class mainMenu {
             option=sc.nextLine().toLowerCase();        
             switch(option)
             {
-                case "*":                
+                case "*":   
+                	MethodCollection.seachVisible=false;
                     method.display();
                     break;
-                case "w":
+                case "i":
                     method.write();
                     break;
-                case "r":
+                case "v":
                     method.read();
                     break;
                 case "u":

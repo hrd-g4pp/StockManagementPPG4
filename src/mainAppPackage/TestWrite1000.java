@@ -16,7 +16,7 @@ public class TestWrite1000 {
         for (int i = 0; i < seprateFile; i++) {
             arrRecord[i] = new ArrayList<>(1_000);
             for (int j = 0; j < 1_000; j++) {
-                arrRecord[i].add(new ProductG4(rowcount, "CC" + rowcount, rowcount + 1, rowcount + 2, date));
+                arrRecord[i].add(new ProductG4(rowcount, "Name" + rowcount, rowcount + 1, rowcount + 2, date,"Des"+j));
                 rowcount++;
             }
             System.gc();
