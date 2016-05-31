@@ -18,8 +18,8 @@ import java.util.Scanner;
 public class MethodCollection {
     public static ArrayList<ProductG4> arrTemp =null;
     static Scanner sc=new Scanner(System.in);
-    String fileName="src/file/record/record1.ppg4";
-    String fileSetName="src/file/rowset/RowSetShow.row";
+    String fileName=FilePath.FILE_PATH;
+    String fileSetName=FilePath.RowSet_PATH;
     int rowSet=readRow(fileSetName);
     int startRow=1;
     int stopRow=startRow+rowSet-1;

@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.Scanner;
+
+import mainAppPackage.FilePath;
 import readwrite.TestWrite10000000;
 import readwrite.ThreadReadFromFile;
 import record.DataRecord;
@@ -56,7 +58,7 @@ public class StockManagement {
 
     public void writeFile() throws Exception,NullPointerException
     {        
-        f=new File("src/file/record/record1.ppg4");
+        f=new File(FilePath.FILE_PATH);
         
         //Read Object
      //   readFile();
